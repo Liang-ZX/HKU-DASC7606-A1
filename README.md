@@ -234,9 +234,9 @@ Standard codes have been tested with the following settings. It's just a referen
 
 ## 5. Important Date
 
-- Assignment 1 Release: Jan 30 (Mon) / Feb 1 (Wed)
+- Assignment 1 Release: Jan 30 (Mon)
 - Test Data Release: Feb 25 (Fri) (**Will be released in Github**)
-- Submission Deadline: Mar 3 (Fri) / Mar 5 (Sun)
+- Submission Deadline: Mar 3 (Fri)
 
 ### Late submission policy:
 - 10% for late assignments submitted within 1 day late.
