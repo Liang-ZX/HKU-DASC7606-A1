@@ -49,6 +49,7 @@ This task aims to recognize and localize traffic participants, like cars in the 
 ```shell
 # Download this project
 git clone https://github.com/Liang-ZX/HKU-DASC7606-A1.git
+cd HKU-DASC7606-A1
 ```
 
 ### 2.0 Dataset Preparation
