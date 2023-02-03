@@ -4,6 +4,7 @@ In this assignment, you will develop an object detection system for autonomous d
 
 **Github Link: [https://github.com/Liang-ZX/HKU-DASC7606-A1](https://github.com/Liang-ZX/HKU-DASC7606-A1)**  
 **PDF File: [Problem-Description.pdf](Problem-Description.pdf)**  
+*(New)* **Q&A Document: [Q&A with Some Introductory Material](https://connecthkuhk-my.sharepoint.com/:w:/g/personal/liangzx_connect_hku_hk/ESWf67SRY4FIgwSD_1rl4ioBANK7Qpcyd5jeHtd605_apw?e=jHy6jT)**  
 **Authors (TAs): Zhixuan Liang, Haibao Yu**  
 **Date: 2022.12**
 
