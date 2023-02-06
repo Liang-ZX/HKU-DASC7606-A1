@@ -125,6 +125,8 @@ To help you better understand and implement the loss function, we can split this
 - The fourth term represents the loss for boxes not containing the objects (Not IOU or No Objects),
 + And the last term is the classification loss.
 
+**Hint: In implementation, the fourth term is split into two part: (Part I) Not response loss: for the box containing the object but not the one with the maximum iou; (Part II) No onject loss: for the box not containing objects.**
+
 #### Task 5: Filling in the Training Pipeline
 We have implemented dataset preprocessing codes for you. We strongly suggest you to read the [src/data/dataset.py](src/data/dataset.py) carefully before completing the following tasks.
 You should fill in two blanks to complete the training pipline in file [src/train.py](src/train.py).
@@ -151,6 +153,8 @@ After completing the evaluation pipeline, you can run in the following command. 
 ```bash
 python eval.py --split 'test' --output_file "./result.pkl"
 ```
+
+**Hint: please pay attention to the threshold set in the evaluation pipeline. It affects mAP a lot.**
 
 ### 2.2 Submitting the Model Outputs of the Test Data
 You should train your model on the **train+val** part, and you should generate and submit the outputs of the test part with your trained detection model.
