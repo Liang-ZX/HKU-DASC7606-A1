@@ -142,6 +142,6 @@ class yololoss(nn.Module):
         class_loss = F.mse_loss(class_pred, class_target, reduction='sum')
         
         """Summarize the five terms"""
-        loss = self.l_coord * loc_loss + 2 * contain_loss + not_response_loss + self.l_noobj * nooobj_loss + class_loss
+        loss = self.l_coord * loc_loss + contain_loss + self.l_noobj * (not_response_loss + nooobj_loss) + class_loss
 
         return loss / N
