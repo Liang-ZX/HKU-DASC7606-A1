@@ -96,9 +96,9 @@ class Dataset(data.Dataset):
         for i in range(cxcy.size()[0]):
             cxcy_sample = cxcy[i]
             ij = (cxcy_sample / cell_size).ceil() - 1
-            target[int(ij[1]), int(ij[0]), 4] = 1
-            target[int(ij[1]), int(ij[0]), 9] = 1
-            target[int(ij[1]), int(ij[0]), int(labels[i]) + 9] = 1
+            for kk in range(B):
+              target[int(ij[1]), int(ij[0]), kk*5 + 4] = 1
+            target[int(ij[1]), int(ij[0]), int(labels[i]) + (B-1)*5+4] = 1
             xy = ij * cell_size
             delta_xy = (cxcy_sample - xy) / cell_size
             target[int(ij[1]), int(ij[0]), 2:4] = wh[i]
