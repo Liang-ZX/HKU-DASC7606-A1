@@ -132,8 +132,8 @@ class yololoss(nn.Module):
         noo_target = target[noo_mask].view(-1, self.len_pred)
         noo_pred_mask = torch.cuda.BoolTensor(noo_pred.size())
         noo_pred_mask.zero_()
-        noo_pred_mask[:, 4] = 1
-        noo_pred_mask[:, 9] = 1
+        for i in range(self.B):
+            noo_pred_mask[:, i*5+4] = 1
         noo_pred_c = noo_pred[noo_pred_mask]
         noo_target_c = noo_target[noo_pred_mask]
         nooobj_loss = F.mse_loss(noo_pred_c, noo_target_c, reduction='sum')
