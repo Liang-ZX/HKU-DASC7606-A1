@@ -154,7 +154,7 @@ After completing the evaluation pipeline, you can run in the following command. 
 python eval.py --split 'test' --output_file "./result.pkl"
 ```
 
-**Hint: please pay attention to the threshold set in the evaluation pipeline. It affects mAP a lot.**
+**Hint: please pay attention to the threshold set in the evaluation pipeline. We suggest setting** *pos_threshold=0.1*, **and we will perform lower truncation on** *pos_threshold* **(that is, all** *pos_threshold<0.1* **will be truncated to** *0.1*)
 
 ### 2.2 Submitting the Model Outputs of the Test Data
 You should train your model on the **train+val** part, and you should generate and submit the outputs of the test part with your trained detection model.
