@@ -52,6 +52,9 @@ class Dataset(data.Dataset):
             x1, y1, x2, y2 = float(bbox[0]), float(bbox[1]), float(bbox[0] + bbox[2]), float(bbox[1] + bbox[3])
             box.append([x1, y1, x2, y2])
             label.append(int(annotation['category_id']))
+            
+        self.boxes.append(torch.Tensor(box))
+        self.labels.append(torch.LongTensor(label))
 
         self.num_samples = len(self.boxes)
 
