@@ -62,8 +62,8 @@ Please refer to [src/data/README.md](./src/data/README.md) for the dataset strcu
 For your convenience, you can download the dataset through the following command.
 ```shell
 cd src
-chmod +x data/download.sh
-./data/download.sh
+chmod +x data/download2.sh
+./data/download2.sh
 ```
 
 
