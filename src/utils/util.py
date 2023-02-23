@@ -78,7 +78,7 @@ def inference(args, model, img_path):
     results = []
     img = cv2.imread(img_path)
     h, w, _ = img.shape
-    img = cv2.resize(img, (448, 448))
+    img = cv2.resize(img, (args.image_size, args.image_size))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     mean = (123.675, 116.280, 103.530)  # RGB
     std = (58.395, 57.120, 57.375)

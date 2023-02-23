@@ -43,7 +43,7 @@ This task aims to recognize and localize traffic participants, like cars in the 
 
 - You must fill in the blanks and submit the completed codes for this assignment with the provided codebase. This assignment offers an incomplete codebase for object detection with modified [**YOLO v1**](https://arxiv.org/abs/1506.02640). 
 
-+ You must submit the test data's model outputs with your completed codes. The test part of the dataset will be released seven days before the submission deadline. You should utilize hyperparameter tuning and other widely-used techniques to improve detection performance.
++ You must submit the test data's model outputs with your completed codes. **Now the test data has been released [here](https://drive.google.com/file/d/1-I1Rp1VrF4S5hx9_X3MUL50C10Ph1Tqe/view).** You should utilize hyperparameter tuning and other widely-used techniques to improve detection performance.
 
 - You must submit a maximum of 6-page technique report to explain how you improve the object detection performance. Besides, some visualization results (e.g., loss curve) are encouraged in this report.
 
@@ -55,8 +55,7 @@ cd HKU-DASC7606-A1
 
 ### 2.0 Dataset Preparation
 The dataset is available [here](https://drive.google.com/file/d/1WhC8AsloaEUipGCQQncYir9Q-Kb9meTC/view?usp=sharing).
-The dataset is composed of train, val, test parts and their corresponding annotations. Now the test part has not yet released.
-We will release the test images without the annotations later (7 days before submission deadline; **Will be released in Github**).
+The dataset is composed of train, val, test parts and their corresponding annotations.
 Please refer to [src/data/README.md](./src/data/README.md) for the dataset strcuture explanation.
 
 For your convenience, you can download the dataset through the following command.
@@ -158,7 +157,19 @@ python eval.py --split 'test' --output_file "./result.pkl"
 
 ### 2.2 Submitting the Model Outputs of the Test Data
 You should train your model on the **train+val** part, and you should generate and submit the outputs of the test part with your trained detection model.
-Before the test dataset is released, you can evaluate your model with the val part.
+**The test part is released [here](https://drive.google.com/file/d/1-I1Rp1VrF4S5hx9_X3MUL50C10Ph1Tqe/view)**, and you can download using the [src/data/download_test.sh](src/data/download_test.sh).
+
+```bash
+cd src
+chmod +x data/download_test.sh
+./data/download_test.sh
+```
+
+You can generate the final result using the following command. **Please specify the image size here if you change it to a larger scale.**
+
+```bash
+python for_submit.py --split 'test' --output_file "./result.pkl" --model_path <your best ckpt file> --image_size <your image size>
+```
 
 #### Task 8: Improving the Detection Performance
 In this task, you should try different techniques to improve the detection performance, such as using grid search for the proper hyperparameters, modifying data preprocessing methods, changing the batch size, replacing the optimizer and so on. You should generate the prediction outputs with the trained detection model on the test data. The output organization should follow the form in the next Section.
@@ -197,7 +208,7 @@ The final score of the assignment is composed of four parts: (1) the codebase yo
 
 1. For the completed codebase (30%): The mark will be given mainly based on completeness under the requirements.
 
-2. For the performance part (50%): TA will rerun your code on another test dataset and give your marks based on the mAP of your model.
+2. For the performance part (50%): TA will rerun your code on another test dataset (same distribution as training set and verification set) and give your marks based on the mAP of your model.
 - mAP larger than 42% will get the full mark of this part.
 - mAP between 38% and 42% will get 90% mark of this part.
 - mAP between 34% and 38% will get 80% mark of this part.
@@ -240,9 +251,9 @@ Standard codes have been tested with the following settings. It's just a referen
 
 ## 5. Important Date
 
-- Assignment 1 Release: Jan 30 (Mon)
-- Test Data Release: Feb 25 (Fri) (**Will be released in Github**)
-- Submission Deadline: Mar 3 (Fri)
+- Assignment 1 Release: Jan 30 (Mon) / Feb 1 (Wed)
+- Test Data Release: Feb 25 (Fri) (**Released [Here](https://drive.google.com/file/d/1-I1Rp1VrF4S5hx9_X3MUL50C10Ph1Tqe/view)**)
+- Submission Deadline: Mar 3 (Fri) / Mar 5 (Sun)
 
 ### Late submission policy:
 - 10% for late assignments submitted within 1 day late.
