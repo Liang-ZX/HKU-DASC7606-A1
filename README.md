@@ -251,15 +251,15 @@ Standard codes have been tested with the following settings. It's just a referen
 
 ## 5. Important Date
 
-- Assignment 1 Release: Jan 30 (Mon) / Feb 1 (Wed)
-- Test Data Release: Feb 25 (Fri) (**Released [Here](https://drive.google.com/file/d/1-I1Rp1VrF4S5hx9_X3MUL50C10Ph1Tqe/view)**)
-- Submission Deadline: Mar 3 (Fri) / Mar 5 (Sun)
+- Assignment 1 Release: Jan 30 (Mon)
+- Test Data Release: Feb 24 (Fri) (**Released [Here](https://drive.google.com/file/d/1-I1Rp1VrF4S5hx9_X3MUL50C10Ph1Tqe/view)**)
+- Submission Deadline: Mar 10 (Fri)
 
 ### Late submission policy:
 - 10% for late assignments submitted within 1 day late.
 - 20% for late assignments submitted within 2 days late.
-- 50% for late assignments submitted within 7 days (Mar 10) late.
-- 100% for late assignments submitted after 7 days (Mar 10) late.
+- 50% for late assignments submitted within 7 days (Mar 17) late.
+- 100% for late assignments submitted after 7 days (Mar 17) late.
 
 ## 6. Contact
 Any question, please contact liangzx@connect.hku.hk or yuhaibao@connect.hk.hk.
