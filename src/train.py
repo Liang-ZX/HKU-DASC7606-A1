@@ -27,7 +27,7 @@ parser.add_argument('--output_dir', default='checkpoints', type=str, help='outpu
 
 parser.add_argument('--l_coord', default=5., type=float, help='hyper parameter for localization loss')
 parser.add_argument('--l_noobj', default=0.5, type=float, help='hyper parameter for no object loss')
-
+parser.add_argument('--image_size', default=448, type=int, help='image size')
 args = parser.parse_args()
 
 
